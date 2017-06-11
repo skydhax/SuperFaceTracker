@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuperFaceTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,22 +52,54 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcy-Hb-q2b" customClass="CircleMenu" customModule="SuperFaceTracker" customModuleProvider="target">
+                                <rect key="frame" x="157" y="537" width="60" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mcy-Hb-q2b" secondAttribute="height" multiplier="1:1" id="aC3-PQ-mJY"/>
+                                </constraints>
+                                <state key="normal" image="icon_menu"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykZ-K2-Nsp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V7n-a1-CM2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mcy-Hb-q2b" secondAttribute="bottom" constant="70" id="0T5-kD-Iy6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="253-fr-eH6" secondAttribute="bottom" id="6rq-NM-QLT"/>
                             <constraint firstAttribute="trailing" secondItem="l4R-1m-MS1" secondAttribute="trailing" id="6ui-Op-9fd"/>
                             <constraint firstAttribute="trailing" secondItem="253-fr-eH6" secondAttribute="trailing" id="9Il-rK-cwW"/>
                             <constraint firstItem="l4R-1m-MS1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BTF-c0-5eR"/>
+                            <constraint firstItem="Mcy-Hb-q2b" firstAttribute="width" secondItem="l4R-1m-MS1" secondAttribute="height" multiplier="60:667" id="KM0-tn-1N6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l4R-1m-MS1" secondAttribute="bottom" id="Npf-94-d1D"/>
                             <constraint firstItem="253-fr-eH6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TCe-GM-cVM"/>
                             <constraint firstItem="l4R-1m-MS1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="grf-ct-8xG"/>
+                            <constraint firstItem="Mcy-Hb-q2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r74-YH-g24"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="bottomCollectionViewConstraint" destination="6rq-NM-QLT" id="dgN-bj-eBN"/>
                         <outlet property="faceTrackerContainerView" destination="l4R-1m-MS1" id="gFg-LA-4ZN"/>
                         <outlet property="filtersCollectionView" destination="253-fr-eH6" id="6y7-n7-PLV"/>
+                        <outlet property="photoCircleMenu" destination="Mcy-Hb-q2b" id="Bru-Dc-adV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,10 +120,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KyP-4b-Uj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_menu" width="25" height="25"/>
+    </resources>
 </document>

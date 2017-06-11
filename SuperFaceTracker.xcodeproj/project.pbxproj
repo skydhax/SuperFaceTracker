@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A895CC691EEC618000B092D3 /* CircleMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895CC681EEC618000B092D3 /* CircleMenu.swift */; };
+		A895CC701EEC61CA00B092D3 /* CircleMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895CC6E1EEC61CA00B092D3 /* CircleMenuButton.swift */; };
+		A895CC711EEC61CA00B092D3 /* CircleMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A895CC6F1EEC61CA00B092D3 /* CircleMenuLoader.swift */; };
+		A8AAD4A11EE64D0A009A2CD6 /* Twinkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AAD4A01EE64D0A009A2CD6 /* Twinkle.swift */; };
+		A8AAD4A31EE652E1009A2CD6 /* TwinkleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A8AAD4A21EE652E1009A2CD6 /* TwinkleImage.png */; };
 		A8D637421EE46F0000112D5E /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D637401EE46F0000112D5E /* FilterCell.swift */; };
 		A8D637431EE46F0000112D5E /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8D637411EE46F0000112D5E /* FilterCell.xib */; };
 		A8D637451EE4769B00112D5E /* FilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D637441EE4769B00112D5E /* FilterDataSource.swift */; };
@@ -53,6 +58,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A895CC681EEC618000B092D3 /* CircleMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleMenu.swift; path = ../CircleMenu.swift; sourceTree = "<group>"; };
+		A895CC6E1EEC61CA00B092D3 /* CircleMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuButton.swift; sourceTree = "<group>"; };
+		A895CC6F1EEC61CA00B092D3 /* CircleMenuLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleMenuLoader.swift; sourceTree = "<group>"; };
+		A8AAD4A01EE64D0A009A2CD6 /* Twinkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Twinkle.swift; sourceTree = "<group>"; };
+		A8AAD4A21EE652E1009A2CD6 /* TwinkleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwinkleImage.png; sourceTree = "<group>"; };
 		A8D637401EE46F0000112D5E /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		A8D637411EE46F0000112D5E /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		A8D637441EE4769B00112D5E /* FilterDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDataSource.swift; sourceTree = "<group>"; };
@@ -98,10 +108,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A8E88B011EDB421A00CC8DE6 = {
+		A895CC601EEC5E1700B092D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A8E88B3B1EDB427900CC8DE6 /* FaceTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A895CC721EEC61D500B092D3 /* CircleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A895CC6E1EEC61CA00B092D3 /* CircleMenuButton.swift */,
+				A895CC6F1EEC61CA00B092D3 /* CircleMenuLoader.swift */,
+				A895CC681EEC618000B092D3 /* CircleMenu.swift */,
+			);
+			name = CircleMenu;
+			sourceTree = "<group>";
+		};
+		A8AAD4A41EE652E7009A2CD6 /* Twinkle */ = {
+			isa = PBXGroup;
+			children = (
+				A8AAD4A21EE652E1009A2CD6 /* TwinkleImage.png */,
+				A8AAD4A01EE64D0A009A2CD6 /* Twinkle.swift */,
+			);
+			name = Twinkle;
+			sourceTree = "<group>";
+		};
+		A8E88B011EDB421A00CC8DE6 = {
+			isa = PBXGroup;
+			children = (
+				A895CC601EEC5E1700B092D3 /* Frameworks */,
 				A8E88B0C1EDB421A00CC8DE6 /* SuperFaceTracker */,
 				A8E88B211EDB421A00CC8DE6 /* SuperFaceTrackerTests */,
 				A8E88B2C1EDB421A00CC8DE6 /* SuperFaceTrackerUITests */,
@@ -122,6 +159,8 @@
 		A8E88B0C1EDB421A00CC8DE6 /* SuperFaceTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A895CC721EEC61D500B092D3 /* CircleMenu */,
+				A8AAD4A41EE652E7009A2CD6 /* Twinkle */,
 				A8E88B0D1EDB421A00CC8DE6 /* AppDelegate.swift */,
 				A8E88B0F1EDB421A00CC8DE6 /* ViewController.swift */,
 				A8D637401EE46F0000112D5E /* FilterCell.swift */,
@@ -222,8 +261,8 @@
 				TargetAttributes = {
 					A8E88B091EDB421A00CC8DE6 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = SM5DS4HC25;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = VDK4394HW7;
+						ProvisioningStyle = Manual;
 					};
 					A8E88B1D1EDB421A00CC8DE6 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -268,6 +307,7 @@
 				A8D637431EE46F0000112D5E /* FilterCell.xib in Resources */,
 				A8E88B151EDB421A00CC8DE6 /* Assets.xcassets in Resources */,
 				A8E88B131EDB421A00CC8DE6 /* Main.storyboard in Resources */,
+				A8AAD4A31EE652E1009A2CD6 /* TwinkleImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +332,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A895CC701EEC61CA00B092D3 /* CircleMenuButton.swift in Sources */,
+				A895CC691EEC618000B092D3 /* CircleMenu.swift in Sources */,
 				A8E88B101EDB421A00CC8DE6 /* ViewController.swift in Sources */,
+				A8AAD4A11EE64D0A009A2CD6 /* Twinkle.swift in Sources */,
 				A8D637421EE46F0000112D5E /* FilterCell.swift in Sources */,
 				A8D637451EE4769B00112D5E /* FilterDataSource.swift in Sources */,
 				A8E88B0E1EDB421A00CC8DE6 /* AppDelegate.swift in Sources */,
+				A895CC711EEC61CA00B092D3 /* CircleMenuLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,16 +491,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SM5DS4HC25;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = VDK4394HW7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SuperFaceTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.skylabs.SuperFaceTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "62911725-4985-4df7-8ac5-4896586c03ef";
+				PROVISIONING_PROFILE_SPECIFIER = "SuperFaceTracker-Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -465,16 +513,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = SM5DS4HC25;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = VDK4394HW7;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SuperFaceTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mx.skylabs.SuperFaceTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "62911725-4985-4df7-8ac5-4896586c03ef";
+				PROVISIONING_PROFILE_SPECIFIER = "SuperFaceTracker-Dev";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
